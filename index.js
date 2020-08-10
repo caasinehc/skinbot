@@ -24,23 +24,33 @@ bot.on("ready", () => {
 
 // Handle messages
 bot.on("message", msg => {
+	let cmdArgs = msg.content.split(" ");
+	
 	// Ping
-	if(msg.content.toLowerCase() === "?ping") {
-		msg.reply("dong");
+	if(msg.content.toLowerCase() === "!ping") {
+		msg.reply("pong");
 	}
 	
-	// Command 2
-	else if(msg.content.toLowerCase() === "hi") {
-		msg.channel.send("imagine talking to a discord bot");
-	}
-	
-	// Command 3
-	else if(msg.content.toLowerCase() === "get on") {
-		msg.channel.send("get in the fucking call right now");
-	}
-	
-	// WIP
-	else if(msg.content.toLowerCase() === "double") {
-		msg.channel.send("Trouble Triple Trouble");
+	if(cmdArgs[0].toLowerCase() === "!sb") {
+		
+		// Command 2
+		if(cmdArgs[1].toLowerCase() === "hi") {
+			msg.channel.send("imagine talking to a discord bot");
+		}
+		
+		// Command 3
+		else if(cmdArgs[1].toLowerCase() === "get on") {
+			msg.channel.send("get in the fucking call right now");
+		}
+		
+		// WIP
+		else if(cmdArgs[1].toLowerCase() === "double") {
+			msg.channel.send("Double Trouble Triple Trouble");
+		}
+		
+		// UUID Retrieval
+		else if(cmdArgs[1].toLowerCase() === "uuid") {
+			msg.channel.send("You are asking about the player named " + cmdArgs[2]);
+		}
 	}
 });
