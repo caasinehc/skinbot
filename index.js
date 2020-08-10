@@ -22,9 +22,13 @@ function getUUID(username) {
 	// Return a promise that will resolve to the UUID
 	return new Promise((resolve, reject) => {
 		// HTTP request options
+		// const OPTIONS = {
+		// 	host: "api.mojang.com",
+		// 	path: "/users/profiles/minecraft/" + username
+		// };
 		const OPTIONS = {
-			host: "api.mojang.com",
-			path: "/users/profiles/minecraft/" + username
+			host: "api.tenor.com",
+			path: "/v1/random?q=Emma%20Watson&limit=1"
 		};
 		
 		// Callback for when we recieve data from the HTTP request
