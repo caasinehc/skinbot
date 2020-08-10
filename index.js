@@ -31,16 +31,16 @@ bot.on("message", msg => {
 	
 	// Command 2
 	else if(msg.content.toLowerCase() === "hi") {
-		msg.reply("imagine talking to a discord bot");
+		msg.channel.send("imagine talking to a discord bot");
 	}
 	
 	// Command 3
 	else if(msg.content.toLowerCase() === "get on") {
-		msg.reply("get in the fucking call right now");
+		msg.channel.send("get in the fucking call right now");
 	}
 	
 	// WIP
-	else if(msg.content.toLowerCase() === "") {
-		msg.reply("get in the fucking call right now");
+	else if(msg.content.toLowerCase() === "double") {
+		msg.channel.send("Trouble Triple Trouble");
 	}
 });
