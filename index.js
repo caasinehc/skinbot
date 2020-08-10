@@ -66,7 +66,7 @@ bot.on("message", msg => {
 	if(cmdArgs[0].toLowerCase() === "!sb") {
 		
 		// UUID Retrieval
-		else if(cmdArgs[1].toLowerCase() === "uuid") {
+		if(cmdArgs[1].toLowerCase() === "uuid") {
 			const username = cmdArgs[2];
 			
 			getUUID(username).then(UUID => {
