@@ -1,7 +1,7 @@
 /*
  * Skinbot
  * v1.0.0
- * By Isaac Chen and Bue
+ * By Isaac Chen and BigBrainBue
  * 8/10/2020
  */
 
@@ -25,7 +25,22 @@ bot.on("ready", () => {
 // Handle messages
 bot.on("message", msg => {
 	// Ping
-	if(msg.content.toLowerCase() === "!ping") {
-		msg.reply("pong");
+	if(msg.content.toLowerCase() === "?ping") {
+		msg.reply("dong");
+	}
+	
+	// Command 2
+	else if(msg.content.toLowerCase() === "hi") {
+		msg.reply("imagine talking to a discord bot");
+	}
+	
+	// Command 3
+	else if(msg.content.toLowerCase() === "get on") {
+		msg.reply("get in the fucking call right now");
+	}
+	
+	// WIP
+	else if(msg.content.toLowerCase() === "") {
+		msg.reply("get in the fucking call right now");
 	}
 });
