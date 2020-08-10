@@ -40,7 +40,9 @@ function getUUID(username) {
 			// When we have recieved the full response, resolve the promise and return it
 			response.on("end", () => {
 				const resp = JSON.parse(responseStr);
-				resolve(WATSON_URL);
+				console.log(responseStr);
+				console.log(resp);
+				resolve(resp);
 			});
 		}
 		
