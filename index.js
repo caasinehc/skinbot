@@ -39,9 +39,9 @@ function getUUID(username) {
 			
 			// When we have recieved the full response, resolve the promise and return it
 			response.on("end", () => {
-				const resp = JSON.parse(responseStr);
 				console.log(responseStr);
 				console.log(resp);
+				const resp = JSON.parse(responseStr);
 				resolve(resp);
 			});
 		}
